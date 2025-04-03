@@ -216,5 +216,193 @@
             {"status": "completed", "timestamp": "2025-04-04T17:00:00"}
         ],
         "completion_date": "2025-04-04T17:00:00"
-    }
+    },
+        {
+            "title": "Migrate database to PostgreSQL",
+            "description": "Move from SQLite to PostgreSQL for better scalability.",
+            "status": "completed",
+            "last_status_change": "2025-04-04T14:30:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-02T08:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T10:30:00"},
+                {"status": "completed", "timestamp": "2025-04-04T14:30:00"}
+            ],
+            "completion_date": "2025-04-04T14:30:00"
+        },
+        {
+            "title": "Enhance search functionality",
+            "description": "Improve search indexing and filters.",
+            "status": "in_progress",
+            "last_status_change": "2025-04-03T16:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T09:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T16:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Set up logging system",
+            "description": "Implement structured logging using ELK stack.",
+            "status": "todo",
+            "last_status_change": "2025-04-03T12:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T12:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Optimize frontend performance",
+            "description": "Reduce bundle size and improve load times.",
+            "status": "completed",
+            "last_status_change": "2025-04-04T18:45:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-02T10:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T15:00:00"},
+                {"status": "completed", "timestamp": "2025-04-04T18:45:00"}
+            ],
+            "completion_date": "2025-04-04T18:45:00"
+        },
+        {
+            "title": "Implement feature flags",
+            "description": "Enable toggling of new features in production.",
+            "status": "in_progress",
+            "last_status_change": "2025-04-03T14:30:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T09:30:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T14:30:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Create automated deployment scripts",
+            "description": "Write scripts to automate deployments using Ansible.",
+            "status": "todo",
+            "last_status_change": "2025-04-03T11:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T11:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Implement multi-language support",
+            "description": "Add translations for Spanish and French.",
+            "status": "completed",
+            "last_status_change": "2025-04-04T17:15:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-02T08:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T10:00:00"},
+                {"status": "completed", "timestamp": "2025-04-04T17:15:00"}
+            ],
+            "completion_date": "2025-04-04T17:15:00"
+        },
+        {
+            "title": "Migrate database to PostgreSQL",
+            "description": "Move from SQLite to PostgreSQL for better scalability.",
+            "status": "completed",
+            "last_status_change": "2025-04-04T14:30:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-02T08:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T10:30:00"},
+                {"status": "completed", "timestamp": "2025-04-04T14:30:00"}
+            ],
+            "completion_date": "2025-04-04T14:30:00"
+        },
+        {
+            "title": "Enhance search functionality",
+            "description": "Improve search indexing and filters.",
+            "status": "in_progress",
+            "last_status_change": "2025-04-03T16:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T09:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T16:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Set up logging system",
+            "description": "Implement structured logging using ELK stack.",
+            "status": "todo",
+            "last_status_change": "2025-04-03T12:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T12:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Optimize frontend performance",
+            "description": "Reduce bundle size and improve load times.",
+            "status": "completed",
+            "last_status_change": "2025-04-04T18:45:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-02T10:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T15:00:00"},
+                {"status": "completed", "timestamp": "2025-04-04T18:45:00"}
+            ],
+            "completion_date": "2025-04-04T18:45:00"
+        },
+        {
+            "title": "Implement feature flags",
+            "description": "Enable toggling of new features in production.",
+            "status": "in_progress",
+            "last_status_change": "2025-04-03T14:30:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T09:30:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T14:30:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Create automated deployment scripts",
+            "description": "Write scripts to automate deployments using Ansible.",
+            "status": "todo",
+            "last_status_change": "2025-04-03T11:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-03T11:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Implement multi-language support",
+            "description": "Add translations for Spanish and French.",
+            "status": "completed",
+            "last_status_change": "2025-04-04T17:15:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-02T08:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-03T10:00:00"},
+                {"status": "completed", "timestamp": "2025-04-04T17:15:00"}
+            ],
+            "completion_date": "2025-04-04T17:15:00"
+        },
+        
+        {
+            "title": "Refactor authentication module",
+            "description": "Improve security and maintainability of authentication code.",
+            "status": "todo",
+            "last_status_change": "2025-04-05T10:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-05T10:00:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Upgrade third-party dependencies",
+            "description": "Ensure all external libraries are updated to the latest stable versions.",
+            "status": "in_progress",
+            "last_status_change": "2025-04-05T12:30:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-05T09:00:00"},
+                {"status": "in_progress", "timestamp": "2025-04-05T12:30:00"}
+            ],
+            "completion_date": null
+        },
+        {
+            "title": "Enhance API security",
+            "description": "Implement rate limiting and stricter CORS policies.",
+            "status": "todo",
+            "last_status_change": "2025-04-05T14:00:00",
+            "status_history": [
+                {"status": "todo", "timestamp": "2025-04-05T14:00:00"}
+            ],
+            "completion_date": null
+        }
 ]
