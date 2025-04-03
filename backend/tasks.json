@@ -1,0 +1,220 @@
+[
+    {
+        "title": "Implement user authentication",
+        "description": "Develop the login and registration system using OAuth2.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-03T10:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T08:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T10:00:00"}
+        ],
+        "completion_date": "2025-04-10T16:00:00"
+    },
+    {
+        "title": "Design landing page",
+        "description": "Create a responsive design for the landing page.",
+        "status": "completed",
+        "last_status_change": "2025-04-04T15:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T08:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T10:00:00"},
+            {"status": "completed", "timestamp": "2025-04-04T15:00:00"}
+        ],
+        "completion_date": "2025-04-04T15:00:00"
+    },
+    {
+        "title": "Set up CI/CD pipeline",
+        "description": "Configure Jenkins for continuous integration and deployment.",
+        "status": "todo",
+        "last_status_change": "2025-04-03T12:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T12:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Optimize database queries",
+        "description": "Improve the performance of database queries.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-03T11:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T09:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T11:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Write unit tests",
+        "description": "Ensure all functions have at least 80% test coverage.",
+        "status": "completed",
+        "last_status_change": "2025-04-04T16:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T09:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T11:00:00"},
+            {"status": "completed", "timestamp": "2025-04-04T16:00:00"}
+        ],
+        "completion_date": "2025-04-04T16:00:00"
+    },
+    {
+        "title": "Conduct user interviews",
+        "description": "Gather feedback from users to improve UX.",
+        "status": "todo",
+        "last_status_change": "2025-04-03T09:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T09:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Refactor codebase",
+        "description": "Clean up and organize the code for better maintainability.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-03T14:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T10:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T14:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Deploy to production",
+        "description": "Deploy the latest version to the production environment.",
+        "status": "todo",
+        "last_status_change": "2025-04-04T13:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-04T13:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Create API documentation",
+        "description": "Document all API endpoints using Swagger.",
+        "status": "completed",
+        "last_status_change": "2025-04-04T17:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T08:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T12:00:00"},
+            {"status": "completed", "timestamp": "2025-04-04T17:00:00"}
+        ],
+        "completion_date": "2025-04-04T17:00:00"
+    },
+    {
+        "title": "Research new technologies",
+        "description": "Explore new tools and frameworks for potential use.",
+        "status": "todo",
+        "last_status_change": "2025-04-03T10:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T10:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Fix security vulnerabilities",
+        "description": "Address all security issues identified in the audit.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-03T11:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T09:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T11:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Update user guide",
+        "description": "Revise the user guide to reflect recent changes.",
+        "status": "completed",
+        "last_status_change": "2025-04-04T18:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T10:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T14:00:00"},
+            {"status": "completed", "timestamp": "2025-04-04T18:00:00"}
+        ],
+        "completion_date": "2025-04-04T18:00:00"
+    },
+    {
+        "title": "Implement caching",
+        "description": "Add caching to improve application performance.",
+        "status": "todo",
+        "last_status_change": "2025-04-05T12:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-05T12:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Conduct code review",
+        "description": "Review code for quality and adherence to standards.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-03T15:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T11:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T15:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Prepare presentation",
+        "description": "Create slides for the upcoming project presentation.",
+        "status": "todo",
+        "last_status_change": "2025-04-06T14:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-06T14:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Integrate third-party API",
+        "description": "Connect the application to a third-party service.",
+        "status": "completed",
+        "last_status_change": "2025-04-04T16:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T09:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T12:00:00"},
+            {"status": "completed", "timestamp": "2025-04-04T16:00:00"}
+        ],
+        "completion_date": "2025-04-04T16:00:00"
+    },
+    {
+        "title": "Set up monitoring",
+        "description": "Implement monitoring tools to track application performance.",
+        "status": "todo",
+        "last_status_change": "2025-04-07T10:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-07T10:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Update dependencies",
+        "description": "Ensure all project dependencies are up to date.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-04T11:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T10:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-04T11:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Conduct training session",
+        "description": "Train team members on new software tools.",
+        "status": "todo",
+        "last_status_change": "2025-04-08T09:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-08T09:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Improve accessibility",
+        "description": "Enhance the application to be more accessible.",
+        "status": "completed",
+        "last_status_change": "2025-04-04T17:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-03T08:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-03T14:00:00"},
+            {"status": "completed", "timestamp": "2025-04-04T17:00:00"}
+        ],
+        "completion_date": "2025-04-04T17:00:00"
+    }
+]
