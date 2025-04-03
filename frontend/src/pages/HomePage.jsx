@@ -9,7 +9,7 @@ const HomePage = () => {
         width: '100%',
         padding: '20px',
         borderRadius: '8px',
-        overflowY: 'auto', 
+        overflowY: 'auto',
       }}
     >
       <TaskBoard />

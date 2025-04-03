@@ -1,32 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { getTasks, updateTask, createTask, deleteTask } from '@/api';
+import { useTasks } from '@/context/TaskContext';
 import { Container, Grid } from '@mui/material';
 import TaskColumn from './TaskColumn';
-import TaskModal from './TaskModal'; 
+import TaskModal from './TaskModal';
+import { useNotification } from '@/providers/NotificationProvider';
+import { createTask, updateTask, deleteTask } from '@/api';
 
 const TaskBoard = () => {
-  const [tasks, setTasks] = useState([]);
+  const { tasks, setTasks } = useTasks();
   const [open, setOpen] = useState(false);
-  const [taskToEdit, setTaskToEdit] = useState(null); 
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const response = await getTasks(token);
-        const normalizedTasks = response.data.map(task => ({
-          ...task,
-          status: task.status
-        }));
-        setTasks(normalizedTasks);
-      } catch (error) {
-        console.error('Error fetching tasks:', error);
-      }
-    };
-    fetchTasks();
-  }, []);
+  const [taskToEdit, setTaskToEdit] = useState(null);
+  const { showMessage } = useNotification();
 
   const handleCreateTask = async (newTask) => {
     try {
@@ -34,8 +20,9 @@ const TaskBoard = () => {
       const response = await createTask(newTask, token);
       setTasks([...tasks, response.data]);
       setOpen(false);
+      showMessage('Task created successfully', 'success');
     } catch (error) {
-      console.error('Error creating task:', error);
+      showMessage('Error creating task: ' + error.message, 'error');
     }
   };
 
@@ -46,8 +33,9 @@ const TaskBoard = () => {
       setTasks(tasks.map(task => task.id === updatedTask.id ? response.data : task));
       setOpen(false);
       setTaskToEdit(null);
+      showMessage('Task updated successfully', 'success');
     } catch (error) {
-      console.error('Error editing task:', error);
+      showMessage('Error editing task: ' + error.message, 'error');
     }
   };
 
@@ -56,34 +44,33 @@ const TaskBoard = () => {
       const token = localStorage.getItem('token');
       await deleteTask(taskId, token);
       setTasks(tasks.filter(task => task.id !== taskId));
+      showMessage('Task deleted successfully', 'success');
     } catch (error) {
-      console.error('Error deleting task:', error);
+      showMessage('Error deleting task: ' + error.message, 'error');
     }
   };
 
   const handleTaskMove = async (taskId, newStatus) => {
     try {
-    
       const updatedTasks = tasks.map(task =>
         task.id === taskId ? { ...task, status: newStatus } : task
       );
       setTasks(updatedTasks);
-  
+
       const token = localStorage.getItem('token');
       const response = await updateTask(taskId, { ...updatedTasks.find(task => task.id === taskId), status: newStatus }, token);
-  
+
       const updatedTask = response.data;
       setTasks(tasks.map(task => task.id === updatedTask.id ? updatedTask : task));
     } catch (error) {
-      console.error('Error updating task status:', error);
+      showMessage('Error updating task status: ' + error.message, 'error');
     }
   };
-  
 
   return (
     <DndProvider backend={HTML5Backend}>
       <Container sx={{ width: '100%', padding: '20px', borderRadius: '8px', overflowX: 'auto' }}>
-        <Grid container spacing={3} sx={{ minWidth: '800px' }} wrap="nowrap"> {/* Evitar que las columnas se rompan */}
+        <Grid container spacing={3} sx={{ minWidth: '800px' }} wrap="nowrap">
           {['por hacer', 'en progreso', 'completada'].map(status => (
             <Grid item key={status} sx={{ minWidth: '300px' }}>
               <TaskColumn
@@ -101,7 +88,7 @@ const TaskBoard = () => {
           open={open}
           onClose={() => setOpen(false)}
           onSave={taskToEdit ? handleEditTask : handleCreateTask}
-          task={taskToEdit} // Pasa la tarea a editar si está en modo edición
+          task={taskToEdit}
         />
       </Container>
     </DndProvider>
