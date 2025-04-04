@@ -87,7 +87,7 @@ const TaskBoard = () => {
         <TaskModal
           open={open}
           onClose={() => setOpen(false)}
-          onSave={taskToEdit ? handleEditTask : handleCreateTask}
+          onSave={taskToEdit?.id ? handleEditTask : handleCreateTask}
           task={taskToEdit}
         />
       </Container>

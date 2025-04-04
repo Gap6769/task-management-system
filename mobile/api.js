@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API_URL = "http://192.168.1.126:8000";
+const API_URL = "https://qjet49m264.execute-api.sa-east-1.amazonaws.com";
 
 // const API_URL = 'http://localhost:8000';
 
@@ -16,3 +16,4 @@ export const updateTask = (taskId, taskData, token) => {
   };
   
 export const deleteTask = (taskId, token) => axios.delete(`${API_URL}/tasks/${taskId}`, { headers: { Authorization: `Bearer ${token}` } });
+

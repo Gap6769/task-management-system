@@ -77,7 +77,6 @@ const TaskModal = ({ open, onClose, onSave, task = {} }) => {
           InputProps={{ style: { color: theme.palette.text.primary } }}
         />
         
-        {/* Dropdown para el estado */}
         <FormControl fullWidth margin="normal">
           <InputLabel>Estado</InputLabel>
           <Select
