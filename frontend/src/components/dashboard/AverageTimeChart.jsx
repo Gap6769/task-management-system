@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from '@mui/material/styles';
+import '@/config/chartConfig';
 
-const AverageTimeChart = ({ tasks, id }) => {
+const AverageTimeChart = ({ tasks }) => {
+  const chartRef = useRef(null);
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === 'dark';
+
+  useEffect(() => {
+    return () => {
+      if (chartRef.current) {
+        chartRef.current.destroy();
+      }
+    };
+  }, []);
 
   const calculateAverageTime = (status) => {
     const filteredTasks = tasks.filter(task => task.status === status);
@@ -39,6 +49,13 @@ const AverageTimeChart = ({ tasks, id }) => {
     plugins: {
       legend: {
         display: false
+      },
+      tooltip: {
+        backgroundColor: theme.palette.background.paper,
+        titleColor: theme.palette.text.primary,
+        bodyColor: theme.palette.text.secondary,
+        borderColor: theme.palette.divider,
+        borderWidth: 1,
       }
     },
     scales: {
@@ -48,7 +65,8 @@ const AverageTimeChart = ({ tasks, id }) => {
           color: theme.palette.divider
         },
         ticks: {
-          color: theme.palette.text.primary
+          color: theme.palette.text.primary,
+          callback: (value) => `${value}h`
         }
       },
       x: {
@@ -64,7 +82,11 @@ const AverageTimeChart = ({ tasks, id }) => {
 
   return (
     <div style={{ height: 300 }}>
-      <Bar id={id} data={data} options={options} />
+      <Bar 
+        ref={chartRef}
+        data={data} 
+        options={options}
+      />
     </div>
   );
 };
