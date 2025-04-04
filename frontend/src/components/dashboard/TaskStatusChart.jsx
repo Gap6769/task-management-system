@@ -2,7 +2,7 @@ import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { useTheme } from '@mui/material/styles';
 
-const TaskStatusChart = ({ tasks }) => {
+const TaskStatusChart = ({ tasks, id }) => {
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === 'dark';
 
@@ -44,7 +44,7 @@ const TaskStatusChart = ({ tasks }) => {
 
   return (
     <div style={{ height: 300 }}>
-      <Pie data={data} options={options} />
+      <Pie id={id} data={data} options={options} />
     </div>
   );
 };

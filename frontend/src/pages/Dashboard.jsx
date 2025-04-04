@@ -34,7 +34,6 @@ const Dashboard = () => {
         >
           Task Dashboard
         </Typography>
-
         <Grid container spacing={3} justifyContent="center">
           <Grid item xs={12} sm={6} md={4}>
             <Card
@@ -62,7 +61,7 @@ const Dashboard = () => {
               >
                 Distribución de Tareas
               </Typography>
-              <TaskStatusChart tasks={tasks} />
+              <TaskStatusChart tasks={tasks} id="status-chart" />
             </Card>
           </Grid>
 
@@ -92,7 +91,7 @@ const Dashboard = () => {
               >
                 Tiempo Promedio por Estado
               </Typography>
-              <AverageTimeChart tasks={tasks} />
+              <AverageTimeChart tasks={tasks} id="average-time-chart" />
             </Card>
           </Grid>
 
@@ -122,7 +121,7 @@ const Dashboard = () => {
               >
                 Tareas Completadas por Fecha
               </Typography>
-              <TaskChart tasks={tasks} />
+              <TaskChart tasks={tasks} id="tasks-chart" />
             </Card>
           </Grid>
         </Grid>

@@ -1,11 +1,20 @@
-// frontend/src/components/dashboard/TaskChart.jsx
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Line } from 'react-chartjs-2';
 import { useTheme } from '@mui/material/styles';
+import '@/config/chartConfig';
 
 const TaskChart = ({ tasks }) => {
+  const chartRef = useRef(null);
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === 'dark';
+
+  useEffect(() => {
+    return () => {
+      if (chartRef.current) {
+        chartRef.current.destroy();
+      }
+    };
+  }, []);
 
   const completedTasks = tasks
     .filter(task => task.status === 'completada' && task.last_status_change)
@@ -43,6 +52,15 @@ const TaskChart = ({ tasks }) => {
     plugins: {
       legend: {
         display: false
+      },
+      tooltip: {
+        mode: 'index',
+        intersect: false,
+        backgroundColor: theme.palette.background.paper,
+        titleColor: theme.palette.text.primary,
+        bodyColor: theme.palette.text.secondary,
+        borderColor: theme.palette.divider,
+        borderWidth: 1,
       }
     },
     scales: {
@@ -53,7 +71,8 @@ const TaskChart = ({ tasks }) => {
         },
         ticks: {
           color: theme.palette.text.primary,
-          stepSize: 1
+          stepSize: 1,
+          precision: 0
         }
       },
       x: {
@@ -64,12 +83,26 @@ const TaskChart = ({ tasks }) => {
           color: theme.palette.text.primary
         }
       }
+    },
+    interaction: {
+      mode: 'nearest',
+      axis: 'x',
+      intersect: false
+    },
+    elements: {
+      line: {
+        tension: 0.4
+      }
     }
   };
 
   return (
     <div style={{ height: 300 }}>
-      <Line data={data} options={options} />
+      <Line 
+        ref={chartRef}
+        data={data} 
+        options={options}
+      />
     </div>
   );
 };

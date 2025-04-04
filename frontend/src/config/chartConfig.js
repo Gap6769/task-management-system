@@ -1,12 +1,26 @@
-import { Chart, ArcElement, CategoryScale, LinearScale, BarElement, LineElement, PointElement, Tooltip, Legend } from 'chart.js';
-
-Chart.register(
-  ArcElement,
+import {
+  Chart as ChartJS,
   CategoryScale,
   LinearScale,
-  BarElement,
-  LineElement,
   PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Title,
   Tooltip,
-  Legend
+  Legend,
+  Filler,
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  ArcElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
 );

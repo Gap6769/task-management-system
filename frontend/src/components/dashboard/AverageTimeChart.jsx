@@ -2,7 +2,7 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { useTheme } from '@mui/material/styles';
 
-const AverageTimeChart = ({ tasks }) => {
+const AverageTimeChart = ({ tasks, id }) => {
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === 'dark';
 
@@ -64,7 +64,7 @@ const AverageTimeChart = ({ tasks }) => {
 
   return (
     <div style={{ height: 300 }}>
-      <Bar data={data} options={options} />
+      <Bar id={id} data={data} options={options} />
     </div>
   );
 };
