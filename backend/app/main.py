@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router, prefix="/auth")
-app.include_router(tasks_router, prefix="/tasks")
+app.include_router(tasks_router, prefix="/api")
 
 @app.get("/health")
 def is_healthy():
