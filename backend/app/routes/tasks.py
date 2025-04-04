@@ -2,12 +2,16 @@ from fastapi import APIRouter, HTTPException, Depends, Body
 from bson import ObjectId
 from app.models import Task, TaskStatus, TaskUpdate, StatusChange
 from app.database import tasks_collection
-from app.auth import oauth2_scheme
+from app.routes.auth import oauth2_scheme
 from datetime import datetime
 
 router = APIRouter()
 
-@router.get("/tasks")
+@router.get("/health")
+def is_healthy():
+    return {"status": "healthy"}
+
+@router.get("/")
 async def get_tasks():
     tasks = list(tasks_collection.find())
     for task in tasks:
@@ -15,7 +19,7 @@ async def get_tasks():
         del task["_id"]
     return tasks
 
-@router.post("/tasks")
+@router.post("/")
 async def create_task(task: Task, token: str = Depends(oauth2_scheme)):
     task_dict = task.dict(exclude_unset=True)
     task_dict["status"] = task_dict["status"].value
@@ -26,7 +30,7 @@ async def create_task(task: Task, token: str = Depends(oauth2_scheme)):
     task.id = str(result.inserted_id)
     return task
 
-@router.put("/tasks/{task_id}")
+@router.put("/{task_id}")
 async def update_task(task_id: str, task: TaskUpdate):
     current_task = tasks_collection.find_one({"_id": ObjectId(task_id)})
     if not current_task:
@@ -53,7 +57,7 @@ async def update_task(task_id: str, task: TaskUpdate):
 
     return updated_task
 
-@router.delete("/tasks/{task_id}")
+@router.delete("/{task_id}")
 async def delete_task(task_id: str, token: str = Depends(oauth2_scheme)):
     result = tasks_collection.delete_one({"_id": ObjectId(task_id)})
     if result.deleted_count == 0:

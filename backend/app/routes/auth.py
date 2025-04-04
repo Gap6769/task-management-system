@@ -51,6 +51,10 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     to_encode.update({"exp": expire})
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
+@auth_router.get("/health")
+def is_healthy():
+    return {"status": "healthy"}
+
 @auth_router.post("/register", response_model=dict)
 async def register_user(user: User):
     if users_collection.find_one({"$or": [{"username": user.username}, {"email": user.email}]}):

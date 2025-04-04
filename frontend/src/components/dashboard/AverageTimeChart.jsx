@@ -13,7 +13,7 @@ const AverageTimeChart = ({ tasks }) => {
       const timeInState = (new Date() - new Date(task.last_status_change)) / (1000 * 60 * 60);
       return acc + timeInState;
     }, 0);
-    return totalTime / filteredTasks.length;
+    return Math.round(totalTime / filteredTasks.length);
   };
 
   const data = {
@@ -26,12 +26,47 @@ const AverageTimeChart = ({ tasks }) => {
           calculateAverageTime('en progreso'),
           calculateAverageTime('completada'),
         ],
-        backgroundColor: isDarkMode ? '#4CAF50' : '#36A2EB',
+        backgroundColor: '#36A2EB',
+        borderColor: isDarkMode ? theme.palette.background.paper : '#ffffff',
+        borderWidth: 2,
       },
     ],
   };
 
-  return <Bar data={data} />;
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        grid: {
+          color: theme.palette.divider
+        },
+        ticks: {
+          color: theme.palette.text.primary
+        }
+      },
+      x: {
+        grid: {
+          display: false
+        },
+        ticks: {
+          color: theme.palette.text.primary
+        }
+      }
+    }
+  };
+
+  return (
+    <div style={{ height: 300 }}>
+      <Bar data={data} options={options} />
+    </div>
+  );
 };
 
 export default AverageTimeChart;
