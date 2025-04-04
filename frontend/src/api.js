@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API_URL = "https://qjet49m264.execute-api.sa-east-1.amazonaws.com/";
+const API_URL = "https://qjet49m264.execute-api.sa-east-1.amazonaws.com";
 
 // const API_URL = 'http://localhost:8000';
 
