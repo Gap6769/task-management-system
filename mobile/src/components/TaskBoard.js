@@ -1,4 +1,3 @@
-// src/components/TaskBoard.js
 import React, { useState } from 'react';
 import { 
   View, 

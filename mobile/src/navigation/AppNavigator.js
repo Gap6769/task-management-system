@@ -1,4 +1,3 @@
-// src/navigation/AppNavigator.js o App.js (donde tengas el MainTabs)
 import { MaterialIcons } from '@expo/vector-icons';
 import { useAuth } from '../context/AuthContext';
 

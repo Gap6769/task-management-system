@@ -1,4 +1,3 @@
-// src/components/charts/BarTaskChart.js
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
 import { BarChart } from 'react-native-chart-kit';
