@@ -1,7 +1,6 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 import { useTheme } from '@mui/material/styles';
-import '@/config/chartConfig';
 
 const TaskStatusChart = ({ tasks }) => {
   const theme = useTheme();
@@ -16,17 +15,38 @@ const TaskStatusChart = ({ tasks }) => {
           tasks.filter(task => task.status === 'en progreso').length,
           tasks.filter(task => task.status === 'completada').length,
         ],
-        backgroundColor: isDarkMode 
-          ? ['#BB86FC', '#03DAC6', '#CF6679'] 
-          : ['#FF6384', '#36A2EB', '#FFCE56'],
-        hoverBackgroundColor: isDarkMode 
-          ? ['#BB86FC', '#03DAC6', '#CF6679'] 
-          : ['#FF6384', '#36A2EB', '#FFCE56'],
+        backgroundColor: [
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56'
+        ],
+        borderColor: isDarkMode ? theme.palette.background.paper : '#ffffff',
+        borderWidth: 2,
       },
     ],
   };
 
-  return <Pie data={data} />;
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        position: 'right',
+        labels: {
+          color: theme.palette.text.primary,
+          font: {
+            size: 12
+          }
+        }
+      }
+    }
+  };
+
+  return (
+    <div style={{ height: 300 }}>
+      <Pie data={data} options={options} />
+    </div>
+  );
 };
 
 export default TaskStatusChart;

@@ -14,7 +14,6 @@ import {
 } from "@mui/material";
 
 import { useAuth } from "@/context/AuthContext";
-import { useNotification } from "@/providers/NotificationProvider";
 
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -29,7 +28,6 @@ const Navigation = ({ onThemeChange }) => {
     return savedMode ? JSON.parse(savedMode) : false;
   });
 
-  const { showMessage } = useNotification();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const isSmallScreen = useMediaQuery((theme) => theme.breakpoints.down("md"));
@@ -56,9 +54,6 @@ const Navigation = ({ onThemeChange }) => {
     setAnchorEl(null);
   };
 
-  const triggerError = () => {
-    showMessage("some weird error", "error");
-  };
 
   return (
     <AppBar position="sticky" sx={{ padding: 2, mb: 3 }}>
