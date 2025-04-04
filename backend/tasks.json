@@ -1,5 +1,48 @@
 [
     {
+        "title": "Desarrollar desafío técnico",
+        "description": "Completar el desafío técnico con estilo y eficiencia.",
+        "status": "completed",
+        "last_status_change": "2025-04-05T14:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-05T09:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-05T11:00:00"},
+            {"status": "completed", "timestamp": "2025-04-05T14:00:00"}
+        ],
+        "completion_date": "2025-04-05T14:00:00"
+    },
+    {
+        "title": "Contratar a David",
+        "description": "Revisar el CV de David y realizar la entrevista.",
+        "status": "todo",
+        "last_status_change": "2025-04-06T09:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-06T09:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Entrevista con cliente",
+        "description": "Preparar la presentación y practicar el discurso.",
+        "status": "todo",
+        "last_status_change": "2025-04-07T10:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-07T10:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
+        "title": "Café con el equipo",
+        "description": "Organizar un café virtual para discutir ideas y relajarse.",
+        "status": "in_progress",
+        "last_status_change": "2025-04-07T11:00:00",
+        "status_history": [
+            {"status": "todo", "timestamp": "2025-04-07T09:00:00"},
+            {"status": "in_progress", "timestamp": "2025-04-07T11:00:00"}
+        ],
+        "completion_date": null
+    },
+    {
         "title": "Implement user authentication",
         "description": "Develop the login and registration system using OAuth2.",
         "status": "in_progress",
